@@ -89,9 +89,13 @@ ChasingDots.defaultProps = {
 
 ChasingDots.propTypes = {
   /**
-   * The color of the dots.
+   * The color of the dot.
    */
   color: PropTypes.string,
+  /**
+   * The color of the dotTwo.
+   */
+  colorTwo: PropTypes.string,
   /**
    * The maximum size of the dots.
    */

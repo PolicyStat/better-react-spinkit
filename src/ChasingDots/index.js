@@ -6,7 +6,7 @@ import { animate, animationName, defaults, preside } from '../util'
 
 const defaultSize = 18
 
-const ChasingDots = ({ color, dotSize, scaleEnd, scaleStart, size, ...props }, { betterReactSpinkit = {} }) => {
+const ChasingDots = ({ color, colorTwo, dotSize, scaleEnd, scaleStart, size, ...props }, { betterReactSpinkit = {} }) => {
   const name = animationName('chasing-dots')
   const finalSize = preside(size, betterReactSpinkit.size, defaultSize)
   const outer = {
@@ -28,6 +28,7 @@ const ChasingDots = ({ color, dotSize, scaleEnd, scaleStart, size, ...props }, {
   const dotTwo = {
     ...dot,
     ...animate({ delay: '-1.0s' }),
+    backgroundColor: colorTwo || color || betterReactSpinkit.color || defaults.color,
     bottom: 0,
     top: 'auto'
   }
